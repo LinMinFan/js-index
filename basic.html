@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>js使用</h3>
+    <h5>F12開啟主控台可查詢.log紀錄</h5>
+    <!-- 使用外部連結寫入js -->
+    <script src="./js/main.js"></script>
+
+    <!-- 使用<script></script>標籤於html內寫入js
+    <script>alert("hello word alert 外部"); </script> -->
+
+    <h3>js基本函數</h3>
+    <h5>console.log()</h5>
+    將變數、字串或計算值顯示於主控台
+
+    <h5>let 彈出視窗</h5>
+    let num1 = prompt("input num1", 0 );
+
+    <h5>alert 警告視窗</h5>
+    alert("我會跳出一個警告視窗");
+
+    <h5>parseInt()、Number() </h5>
+    parseInt() 拆解字串並將拆解所得第一組整數(int)回傳<br>
+    parseInt("10"); 結果為 10<br>
+    parseInt("10.00"); 結果為 10<br>
+    parseInt("10.33"); 結果為 10<br>
+    parseInt("34 45 66"); 結果為 34<br>
+    parseInt(" 60 "); 結果為 60<br>
+    parseInt("40 years"); 結果為 40<br>
+    parseInt("He was 40"); 結果為 NaN<br>
+    <br>
+    Number() 將booleans 轉為數字0、1，new Date(y,m,d)轉為秒數(月份從0開始至11代表1~12月)<br>、以及一般輸入數字轉為整數(int)<br>
+    Number(true); 結果為 1<br>
+    Number(false); 結果為 0<br>
+    Number(new Date(2022,5,12)); 結果為 1654963200000<br>
+    Number(999); 結果為 999 <br>
+    Number("999"); 結果為 999 <br>
+    Number("999 888"); 結果為 NaN<br>
+    <h3>練習題 模擬提款機</h3>
+    <script>
+        sevings = 1000;
+        let take = prompt("領出金額", "金額");
+        if (Number(sevings) > Number(take)) {
+            result = Number(sevings) - Number(take);
+            alert("餘額" + result + "元");
+        } else if (Number(sevings) < Number(take)) {
+            alert("餘額不足");
+        } else if (Number(sevings) == Number(take)) {
+            alert("餘額0");
+        }
+        sevings = result;
+        let account = prompt("轉出帳號", "帳號");
+        let money = prompt("轉出金額", "金額");
+        if (Number(sevings) > Number(money)) {
+            result = Number(sevings) - Number(money);
+            alert("餘額" + result + "元");
+        } else if (Number(sevings) < Number(money)) {
+            alert("餘額不足");
+        } else if (Number(sevings) == Number(money)) {
+            alert("餘額0");
+        }
+    </script>
+
+</body>
+
+</html>
