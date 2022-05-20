@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提款機練習</title>
+</head>
+<body>
+    <script>
+        sevings = 1000;
+        let take = prompt("領出金額", "金額");
+        if (Number(sevings) > Number(take)) {
+            result = Number(sevings) - Number(take);
+            alert("餘額" + result + "元");
+        } else if (Number(sevings) < Number(take)) {
+            alert("餘額不足");
+        } else if (Number(sevings) == Number(take)) {
+            alert("餘額0");
+        }
+        sevings = result;
+        let account = prompt("轉出帳號", "帳號");
+        let money = prompt("轉出金額", "金額");
+        if (Number(sevings) > Number(money)) {
+            result = Number(sevings) - Number(money);
+            alert("餘額" + result + "元");
+        } else if (Number(sevings) < Number(money)) {
+            alert("餘額不足");
+        } else if (Number(sevings) == Number(money)) {
+            alert("餘額0");
+        }
+    </script>
+
+</body>
+</html>
