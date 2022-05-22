@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點餐機練習</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <form action="" method="get" id="myform">
+        <div class="content">
+            <div class="title">
+                <img src="https://picsum.photos/id/425/1000/250" alt="">
+                <div class="titletext"><i class="fa-solid fa-mug-saucer"></i>
+                </div>
+                <span class="time" id="current"></span>
+            </div>
+
+            <div class="menu">
+                <div class="menuName mn1">自由配</div>
+                <div class="menuName mn2">餐點</div>
+                <div class="menuName mn3">數量</div>
+                <div class="menuName mn4">總價</div>
+            </div>
+            <div class="product">
+                <div class="name">
+                    主餐
+                </div>
+                <div class="item">
+                    <select name="item1" id="item1">
+                        <option value="0">========選擇========</option>
+                        <option value="50">滿福堡_$50</option>
+                        <option value="48">豬肉滿福堡_$48</option>
+                        <option value="58">豬肉滿福堡加蛋_$58</option>
+                        <option value="78">無敵豬肉滿福堡加蛋_$78</option>
+                        <option value="48">香鷄滿福堡_$48</option>
+                        <option value="58">香鷄滿福堡加蛋_$58</option>
+                    </select>
+                </div>
+                <div class="count">
+                    <input type="number" name="count1" id="count1" value="0">
+                </div>
+                <div class="total" id="total1">
+                    小計：
+                </div>
+            </div>
+            <div class="product">
+                <div class="name">
+                    副餐
+                </div>
+                <div class="item">
+                    <select name="item2" id="item2">
+                        <option value="0">========選擇========</option>
+                        <option value="35">薯條(小)_$35</option>
+                        <option value="45">薯條(中)_$45</option>
+                        <option value="58">薯條(大)_$58</option>
+                        <option value="32">薯餅_$32</option>
+                    </select>
+                </div>
+                <div class="count">
+                    <input type="number" name="count2" id="count2" value="0">
+                </div>
+                <div class="total" id="total2">
+                    小計：
+                </div>
+            </div>
+            <div class="product">
+                <div class="name">
+                    飲料
+                </div>
+                <div class="item">
+                    <select name="item3" id="item3">
+                        <option value="0">========選擇========</option>
+                        <option value="33">可口可樂_$33</option>
+                        <option value="33">雪碧_$33</option>
+                        <option value="33">冰紅茶_$33</option>
+                        <option value="33">冰綠茶_$33</option>
+                        <option value="38">奶茶_$38</option>
+                        <option value="48">經典美式咖啡_$48</option>
+                    </select>
+                </div>
+                <div class="count">
+                    <input type="number" name="count3" id="count3" value="0">
+                </div>
+                <div class="total" id="total3">
+                    小計：
+                </div>
+            </div>
+            <div class="footer">
+                <div class="sum" id="sum">
+                </div>
+                <div class="submit">
+                    <input type="reset" value="重填">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="./main3.js"></script>
+</body>
+
+</html>

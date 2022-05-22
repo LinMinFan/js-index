@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件/屬性/方法</title>
+</head>
+
+<body>
+    <h2>物件基本概念</h2>
+    <h3>物件導向</h3>
+    <p>定義物件類別=>定義物件屬性=>定義物件方法</p>
+    <h3>this指向變數</h3>
+    <p>this 值在所有函式以外的全域執行環境下，會被當作全域物件</p>
+    <p>
+        console.log(this.document === document); // true <br>
+        <br>
+        // 在網路瀏覽器中，window 物件也是全域物件。 <br>
+        console.log(this === window); // true <br>
+        <br>
+        this.a = 37; <br>
+        console.log(window.a); // 37 <br>
+        <br>
+        this.b = "MDN"; <br>
+        console.log(window.b) // "MDN" <br>
+        console.log(b) // "MDN" <br>
+    </p>
+    <p>在函式內的 this 值取決於該函式如何被呼叫</p>
+    <p>
+        let a = 15;<br>
+        function myfun(a){ <br>
+        let x = a;<br>
+        let y = this.a;<br>
+        console.log(x,y);<br>
+        } <br>
+        myfun(100); //x = 100 , y =15;<br>
+    </p>
+    <h3>otherobj.call(thisobj)語法</h3>
+    <p>待補充...</p>
+    <h3>apply()語法</h3>
+    <p>待補充...</p>
+    <h3>Object.create(Object,{prototype:{value:condition}})語法</h3>
+    <p>待補充...</p>
+
+</body>
+
+</html>

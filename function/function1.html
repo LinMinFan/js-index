@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提款機功能練習</title>
+    <script src="./main1.js"></script>
+</head>
+
+<body>
+    <script>
+        //  function hello(){
+        //      console.log('12345');
+        //  }
+        //  hello();
+        console.log('歡迎光臨');
+        let save = Number(prompt('存款金額', 0));
+        console.log('存款金額=>' + save);
+        let action = Number(prompt('請輸入：1=>提款;2=>轉帳;3=>存款', 0));
+        console.log('動作中');
+        switch (action) {
+            case 1:
+                getmoneyfun();
+                break;
+            case 2:
+                transformoneyfun();
+                break;
+            case 3:
+                savemoneyfun();
+                break;
+            default:
+                
+            break;
+
+        }
+        mystring = mystring + '餘額:' + save + '\n';
+        alert(mystring);
+
+       // let mystring = '餘額:' + save + '\n' ;
+    </script>
+</body>
+
+</html>
