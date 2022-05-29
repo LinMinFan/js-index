@@ -1,4 +1,4 @@
-document.getElementById("current").addEventListener("load",current_time());
+document.addEventListener("load",current_time());
 
 function current_time() {
     NowDate = new Date();
@@ -61,3 +61,11 @@ function sunfun() {
 //    document.getElementById("sum").innerText = `總價: ${result1} 元`; //回復結果
 //
 //})
+document.addEventListener("mousemove", function (e) {
+        document.getElementById("cat").innerHTML = "<i class='fa-solid fa-cat'></i>";
+        let cat = document.getElementById("cat");
+        let x = e.pageX;
+        let y = e.pageY;
+        cat.style.left = x + "px";
+        cat.style.top = y + "px";
+    });
