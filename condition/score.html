@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //======while練習(一)學生人數,成績,總分,平均======
+        //輸入學生人數
+        //let input = Number(prompt('學生人數', 0));
+        //let i = 1;
+        //console.log('人數' + input);
+
+        //輸入每位學生成績 國文 英文 數學
+        //while(i <= input){
+        //let ch = Number(prompt(`學生${i}國文分數`, 0));
+        //console.log('國文' + ch);
+        //let en = Number(prompt(`學生${i}英文分數`, 0));
+        //console.log('英文' + en);
+        //let mt = Number(prompt(`學生${i}數學分數`, 0));
+        //console.log('數學' + mt);
+        //計算總成績
+        //let sum = ch +  en + mt;
+        //console.log(`學生${i}總成績${sum}分`);
+        //document.write(`學生${i}:國文=>${ch}分,英文=>${en}分,數學=>${mt}分<br>`);
+        //document.write(`學生${i}總成績${sum}分<br>`);
+        //計算平均成績
+        //let avg = Math.round(sum / 3);  
+        //console.log(`學生${i}平均成績${avg}分`);
+        //document.write(`學生${i}平均成績${avg}分<br><br>`);
+        //i++ ;
+        //}
+
+        //======while練習(二)計算全班,總分,平均======
+
+        //輸入學生人數
+        let input = Number(prompt('學生人數', 0));
+        if (input < 3) {
+            let i = 1; //圈數
+            let allsum = 0; //成績總平均
+            let allch = 0; //國文總平均
+            let allen = 0; //英文總平均
+            let allmt = 0; //數學總平均
+            console.log('人數' + input);
+            while (i <= input) {
+                let ch = Number(prompt(`學生${i}國文分數`, 0));
+                console.log('國文' + ch);
+                let en = Number(prompt(`學生${i}英文分數`, 0));
+                console.log('英文' + en);
+                let mt = Number(prompt(`學生${i}數學分數`, 0));
+                console.log('數學' + mt);
+                //計算總成績
+                let sum = ch + en + mt;
+                //全班總分
+                allsum = allsum + sum;
+                //輸入每位學生成績 國文 英文 數學
+                console.log(`學生${i}總成績${sum}分`);
+                document.write(`學生${i}:國文=>${ch}分,英文=>${en}分,數學=>${mt}分<br>`);
+                document.write(`學生${i}總成績${sum}分<br>`);
+                //計算平均成績
+                let avg = Math.round(sum / 3);
+                console.log(`學生${i}平均成績${avg}分`);
+                document.write(`學生${i}平均成績${avg}分<br>`);
+                //各科總成績
+                allch = allch + ch;
+                allen = allen + en;
+                allmt = allmt + mt;
+                i++;
+            }
+            //全班平均
+            let allavg = Math.round(allsum / input * 100) / 100;
+            let allchavg = Math.round(allch / input * 100) / 100;
+            let allenavg = Math.round(allen / input * 100) / 100;
+            let allmtavg = Math.round(allmt / input * 100) / 100;
+            document.write(`全班總成績${allsum}分<br>`);
+            document.write(`全班總平均${allavg}分<br>`);
+            document.write(`全班國文總平均${allchavg}分<br>`);
+            document.write(`全班總英文平均${allenavg}分<br>`);
+            document.write(`全班總數學平均${allmtavg}分<br>`);
+        } else {
+            document.write(`老師的手會斷掉<br>`);
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

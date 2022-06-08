@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+//大樂透練習
+
+let loter = []; //大樂透開獎號陣列
+
+
+//console.log(i);
+while (loter.length < 6) {  //需取次數最多6個
+    let num = Math.floor(Math.random() * 48) + 1;   //取1~49號碼
+    console.log(num);
+    let count = loter.length;
+    if (loter.indexOf(num)<0){  //判斷不重複
+        loter.push(num);
+        document.write(`第${count + 1}個號碼是${loter[count]}<br>`);
+    }
+}
+console.log(loter);
+document.write(`今天開獎號碼是${loter}<br>`);
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

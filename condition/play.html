@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+//let i = 0; 
+//do {
+    //console.log(i);
+    //i++;
+//} while (i < 10);
+
+//每項100元
+// input 10項 1000元
+
+let i = 1;
+let input = Number(prompt("輸入次數",10));
+//do {
+    //document.write(`玩了${i}項總共花了${100 * i}元<br>`);
+    //i++;
+//} while (i <= input);
+
+
+//前三項300元之後一項10元
+let sum = 0;
+let take = 0;
+do {
+    if (i == 1) {
+        take =300;
+    }else if(i > 1 && i <= 3){
+        take = 0;
+    }else if(i > 3){
+        take = 10;
+    }
+    if (i < 4) {
+        sum = 300;
+    }else {
+        sum = sum + 10;
+    }
+    document.write(`玩第${i}項花${take}元總共花了${sum}元<br>`);
+    i++;
+} while (i <= input);
+
+
+</script>
+
+
+
+</body>
+</html>
