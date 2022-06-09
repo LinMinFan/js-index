@@ -11,7 +11,7 @@
 
 <script>
 //大樂透練習
-
+document.write("<h3>練習一用while迴圈</h3>");
 let loter = []; //大樂透開獎號陣列
 
 
@@ -28,14 +28,26 @@ while (loter.length < 6) {  //需取次數最多6個
 console.log(loter);
 document.write(`今天開獎號碼是${loter}<br>`);
 
-
-
-
-
-
-
 </script>
+<!-- 大樂透練習 -->
+<h3>練習二用function</h3>
+<button onclick="myFunction()">點我開獎</button>
+<p id="demo"></p>
 
+<script>
+    
+    function myFunction() {
+    let points=[];
+    for (let i = 1; i <= 49; i++){
+        points.push(`${i}`);
+       
+    } 
+    points.sort(function(a, b){return 0.5 - Math.random()});
+    document.getElementById("demo").innerHTML = points;
+    document.getElementById("demo").innerHTML = points.splice(0,6);
+}
+document.getElementById("demo").innerHTML = points;
+</script>
 
 </body>
 </html>
