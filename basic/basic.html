@@ -6,106 +6,186 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js入門</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-width: 100vh;
+            min-height: 100vh;
+        }
+
+        .continer {
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
 </head>
 
 <body>
-    <a href="./practice.html">
-        <h3>練習題 模擬提款機</h3>
-    </a>
-    <h3>DOM文件物件模型</h3>
-    <p>Document Object Model，縮寫DOM，以樹狀結構來表示 HTML 文件的模型</p>
-    <p>在最根部的地方，就是 document處理可延伸標示語言的標準程式介面</p>
-    <p>藉由DOM API去存取並改變HTML架構、樣式和內容的方法，JavaScript 就是透過 DOM 提供的 API 來對 HTML 做存取與操作。</p>
-    <h3>取得DOM原型物件</h3>
-    <p>根據ID名稱選取：document.getElementById(elementId)</p>
-    <p>根據元素名稱選取：document.getElementsByTagName(tagName)</p>
-    <p>根據名稱選取：document.getElementsByName(name)</p>
-    <p>根據 Class 名稱選取：document.getElementsByClassName(classname)</p>
-    <h3>BOM瀏覽器物件模型</h3>
-    <p>瀏覽器所有功能的核心，與網頁的內容無關<br>
-        BOM 的核心其實是 window 物件。 <br>
-        所有的BOM都可透過window來存取。<br>
-        window物件的使用不須經過宣告，可以直接使用。<br>
-        事實上，在Javcascript中，所有的全域變數、函式、物件，其實都是屬於window物件。 <br>
-    </p>
-    <h3>常用的window屬性</h3>
-    <p>closed:返回視窗是否已關閉</p>
-    <p>defaultStats:用於瀏覽器狀態欄內的預設字符串</p>
-    <p>document:document物件</p>
-    <p>history:history物件</p>
-    <p>innerheight:視窗內部高度，可以用document.documentElement.clientHeight作為代替</p>
-    <p>innerwidth:視窗內部寬度，可以用document.documentElement.clientWidth作為代替</p>
-    <p>length:返回框架數量</p>
-    <p>location:location物件</p>
-    <p>name:視窗名稱</p>
-    <p>Navigator:Navigator物件</p>
-    <p>opener:表示打開窗口的Window對象</p>
-    <p>outerheight:返回視窗外部高度</p>
-    <p>outerwidth:返回視窗外部寬度</p>
-    <p>pageXOffset:當前頁面相對於視窗顯示區左上角的X位置</p>
-    <p>pageYOffset:當前頁面相對於視窗顯示區左上角的Y位置</p>
-    <p>parent:返回父視窗</p>
-    <p>Screen:screen物件</p>
-    <p>self:視窗本身的引用</p>
-    <p>status:顯示瀏覽器狀態欄的字串</p>
-    <p>top:最頂層祖先視窗</p>
-    <p>window:視窗本身的引用</p>
-    <h3>常用的window方法</h3>
-    <p>alert():跳出一個警告訊息窗</p>
-    <p>blur():移除該視窗焦點</p>
-    <p>clearInterval():取消由 setInterval() 設定的計時器</p>
-    <p>clearTimeout():取消由 setTimeout() 方法設定的計時器</p>
-    <p>close():關閉瀏覽器視窗</p>
-    <p>confirm():跳出一個有確認與取消按鈕地確認框</p>
-    <p>createPopup():建立一個彈出視窗</p>
-    <p>focus():取得焦點</p>
-    <p>moveBy():以相對位置移動視窗</p>
-    <p>moveTo():移動視窗到指定位置</p>
-    <p>open():開啟一個新的瀏覽器視窗</p>
-    <p>print():輸出目前窗口內容</p>
-    <p>prompt():跳出可輸入訊息的對話</p>
-    <p>resizeBy():調整視窗大小</p>
-    <p>resizeTo():調整視窗大小</p>
-    <p>scrollTo():滾動內容</p>
-    <p>setInterval():計時器</p>
-    <p>setTimeout():計時器</p>
-    <h3>js使用</h3>
-    <h5>F12開啟主控台可查詢.log紀錄</h5>
-    <h3>js寫入方式</h3>
-    <p>使用外部連結寫入js<br>
-        script src=" " /script</p>
+    <div class="continer">
+        <a href="./practice.html">
+            <h3>練習題 模擬提款機</h3>
+        </a>
+        <h3>DOM文件物件模型</h3>
+        <p>Document Object Model，縮寫DOM，以樹狀結構來表示 HTML 文件的模型</p>
+        <p>在最根部的地方，就是 document處理可延伸標示語言的標準程式介面</p>
+        <p>藉由DOM API去存取並改變HTML架構、樣式和內容的方法，JavaScript 就是透過 DOM 提供的 API 來對 HTML 做存取與操作。</p>
+        <ul>
+            <li>
+                取得DOM物件 / 元素(Elements)
+            </li>
+            <p>根據ID名稱選取：document.getElementById('elementId')</p>
+            <p>根據 Class 名稱選取：document.getElementsByClassName('classname')</p>
+            <p>根據html標籤選取：document.getElementsByTagName('tagName')</p>
+            <p>根據css選擇器選取：document.querySelector('.class' or '#id')</p>
+            <p>根據名稱選取：document.getElementsByName('name')</p>
+        </ul>
+        <ul>
+            <li>
+                Html常用屬性
+            </li>
+            <h4>修改 HTML 內容</h4>
+            <p>
+                .textContent = new HTML <br>
+                .innerText = new HTML <br>
+                .innerHTML = new HTML
+            </p>
+            <h4>更改 HTML 屬性</h4>
+            <p>
+                'img id='myImage' src='smiley.gif'<br>
+                document.getElementById("myImage").src = "landscape.jpg";
+            </p>
+            <h4>更改 css 樣式</h4>
+            <p>
+                'p id="p2">Hello World! /p'<br>
+                document.getElementById("p2").style.color = "blue";
+            </p>
+            <p>
+                let box = document.querySelector('.box');<br>
+                box.style.backgroundColor = "black";<br>
+                <br>
+                let box = document.querySelector('.box');<br>
+                box.style = "background-color:black";<br>
+                兩種寫法都可以
+            </p>
+            <p>
+                屬性已存在，可直接使用 物件.屬性="";寫法<br>
+                屬性不存在，需使用 物件.setAttribute('屬性','數值');寫法創建屬性
+            </p>
+        </ul>
+        <ul>
+            <li>
+                DOM事件監控addEventListener()語法
+            </li>
+            <h4>function在外寫法</h4>
+            <p>
+                element.addEventListener("click", myFunction);<br>
+                function myFunction() {<br>
+                document.getElementById("demo").innerHTML = "Hello World";<br>
+                }
+            </p>
+            <h4>包含function寫法</h4>
+            <p>
+                element.addEventListener("click", function() {<br>
+                document.getElementById("demo").innerHTML = "Hello World";<br>
+                });
+            </p>
+            <h4>事件寫於Html中js定義function</h4>
+            <p>
+                'button type="button" onclick="myfun1()">點我1 /button'<br>
+                function myfun1() {<br>
+                console.log('ok1');<br>
+                }
+            </p>
+        </ul>
+        <h3>BOM瀏覽器物件模型</h3>
+        <p>瀏覽器所有功能的核心，與網頁的內容無關<br>
+            BOM 的核心其實是 window 物件。 <br>
+            所有的BOM都可透過window來存取。<br>
+            window物件的使用不須經過宣告，可以直接使用。<br>
+            事實上，在Javcascript中，所有的全域變數、函式、物件，其實都是屬於window物件。 <br>
+        </p>
 
-    <p>使用 script /script 標籤於html內寫入js</p>
-    <p>script alert("hello word alert 內部"); /script</p>
+        <h3>常用的window屬性</h3>
+        <p>closed:返回視窗是否已關閉</p>
+        <p>defaultStats:用於瀏覽器狀態欄內的預設字符串</p>
+        <p>document:document物件</p>
+        <p>history:history物件</p>
+        <p>innerheight:視窗內部高度，可以用document.documentElement.clientHeight作為代替</p>
+        <p>innerwidth:視窗內部寬度，可以用document.documentElement.clientWidth作為代替</p>
+        <p>length:返回框架數量</p>
+        <p>location:location物件</p>
+        <p>name:視窗名稱</p>
+        <p>Navigator:Navigator物件</p>
+        <p>opener:表示打開窗口的Window對象</p>
+        <p>outerheight:返回視窗外部高度</p>
+        <p>outerwidth:返回視窗外部寬度</p>
+        <p>pageXOffset:當前頁面相對於視窗顯示區左上角的X位置</p>
+        <p>pageYOffset:當前頁面相對於視窗顯示區左上角的Y位置</p>
+        <p>parent:返回父視窗</p>
+        <p>Screen:screen物件</p>
+        <p>self:視窗本身的引用</p>
+        <p>status:顯示瀏覽器狀態欄的字串</p>
+        <p>top:最頂層祖先視窗</p>
+        <p>window:視窗本身的引用</p>
+        <h3>常用的window方法</h3>
+        <p>alert():跳出一個警告訊息窗</p>
+        <p>blur():移除該視窗焦點</p>
+        <p>clearInterval():取消由 setInterval() 設定的計時器</p>
+        <p>clearTimeout():取消由 setTimeout() 方法設定的計時器</p>
+        <p>close():關閉瀏覽器視窗</p>
+        <p>confirm():跳出一個有確認與取消按鈕地確認框</p>
+        <p>createPopup():建立一個彈出視窗</p>
+        <p>focus():取得焦點</p>
+        <p>moveBy():以相對位置移動視窗</p>
+        <p>moveTo():移動視窗到指定位置</p>
+        <p>open():開啟一個新的瀏覽器視窗</p>
+        <p>print():輸出目前窗口內容</p>
+        <p>prompt():跳出可輸入訊息的對話</p>
+        <p>resizeBy():調整視窗大小</p>
+        <p>resizeTo():調整視窗大小</p>
+        <p>scrollTo():滾動內容</p>
+        <p>setInterval():計時器</p>
+        <p>setTimeout():計時器</p>
+        <h3>js使用</h3>
+        <h5>F12開啟主控台可查詢.log紀錄</h5>
+        <h3>js寫入方式</h3>
+        <p>使用外部連結寫入js<br>
+            script src=" " /script</p>
 
-    <h3>js基本函數</h3>
-    <h5>console.log()</h5>
-    將變數、字串或計算值顯示於主控台
+        <p>使用 script /script 標籤於html內寫入js</p>
+        <p>script alert("hello word alert 內部"); /script</p>
 
-    <h5>let 彈出視窗</h5>
-    let num1 = prompt("顯示訊息", 預設值 );
+        <h3>js基本函數</h3>
+        <h5>console.log()</h5>
+        將變數、字串或計算值顯示於主控台
 
-    <h5>alert 警告視窗</h5>
-    alert("我會跳出一個警告視窗");
+        <h5>let 彈出視窗</h5>
+        let num1 = prompt("顯示訊息", 預設值 );
 
-    <h5>parseInt()、Number() </h5>
-    parseInt() 拆解字串並將拆解所得第一組整數(int)回傳<br>
-    parseInt("10"); 結果為 10<br>
-    parseInt("10.00"); 結果為 10<br>
-    parseInt("10.33"); 結果為 10<br>
-    parseInt("34 45 66"); 結果為 34<br>
-    parseInt(" 60 "); 結果為 60<br>
-    parseInt("40 years"); 結果為 40<br>
-    parseInt("He was 40"); 結果為 NaN<br>
-    <br>
-    Number() 將booleans 轉為數字0、1，new Date(y,m,d)轉為秒數(月份從0開始至11代表1~12月)<br>、以及一般輸入數字轉為整數(int)<br>
-    Number(true); 結果為 1<br>
-    Number(false); 結果為 0<br>
-    Number(new Date(2022,5,12)); 結果為 1654963200000<br>
-    Number(999); 結果為 999 <br>
-    Number("999"); 結果為 999 <br>
-    Number("999 888"); 結果為 NaN<br>
+        <h5>alert 警告視窗</h5>
+        alert("我會跳出一個警告視窗");
 
+        <h5>parseInt()、Number() </h5>
+        parseInt() 拆解字串並將拆解所得第一組整數(int)回傳<br>
+        parseInt("10"); 結果為 10<br>
+        parseInt("10.00"); 結果為 10<br>
+        parseInt("10.33"); 結果為 10<br>
+        parseInt("34 45 66"); 結果為 34<br>
+        parseInt(" 60 "); 結果為 60<br>
+        parseInt("40 years"); 結果為 40<br>
+        parseInt("He was 40"); 結果為 NaN<br>
+        <br>
+        Number() 將booleans 轉為數字0、1，new Date(y,m,d)轉為秒數(月份從0開始至11代表1~12月)<br>、以及一般輸入數字轉為整數(int)<br>
+        Number(true); 結果為 1<br>
+        Number(false); 結果為 0<br>
+        Number(new Date(2022,5,12)); 結果為 1654963200000<br>
+        Number(999); 結果為 999 <br>
+        Number("999"); 結果為 999 <br>
+        Number("999 888"); 結果為 NaN<br>
+    </div>
 </body>
 
 </html>

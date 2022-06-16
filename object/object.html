@@ -6,160 +6,178 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>物件/屬性/方法</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-width: 100vh;
+            min-height: 100vh;
+        }
+
+        .continer {
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h2>物件基本概念</h2>
-    <h3>物件導向</h3>
-    <p>定義物件類別=>定義物件屬性=>定義物件方法</p>
-    <h3>Object有如PHP中的關聯陣列</h3>
-    <ul>
-        <li>創建方式</li>
-        <p>const person = {firstName:"John", lastName:"Doe", age:50,eyeColor:"blue"};</p>
-        <p>
-            const person = {<br>
-            firstName: "John",<br>
-            lastName: "Doe",<br>
-            age: 50,<br>
-            eyeColor: "blue"<br>
-            };
-        </p>
-        <p>
-            const person = {};<br>
-            person.firstName = "John";<br>
-            person.lastName = "Doe";<br>
-            person.age = 50;<br>
-            person.eyeColor = "blue";
-        </p>
-        <p>
-            const person = new Object();<br>
-            person.firstName = "John";<br>
-            person.lastName = "Doe";<br>
-            person.age = 50;<br>
-            person.eyeColor = "blue";
-        </p>
-    </ul>
-    <h3>物件屬性</h3>
-    <ul>
-        <li>呼叫屬性語法</li>
-        <p>
-            objectName.property // person.age
-        </p>
-        <p>
-            objectName["property"] // person["age"]
-        </p>
-        <p>
-            objectName[expression] // x = "age"; person[x]
-        </p>
-    </ul>
-    <h3>for...in函式 / for...of函式</h3>
-    <ul>
-        <li>語法</li>
-        <p>
-            for (const key in object) {<br>
-            console.log(key);<br>
-            } //提出索引/關聯索引
-        </p>
-        <p>
-            for (const iterator of object) {<br>
-            <br>
-            } //提出屬性(僅陣列適用)物件不適用此函式(物件可用Object.values())
+    <div class="continer">
+        <h2>物件基本概念</h2>
+        <h3>物件導向</h3>
+        <p>定義物件類別=>定義物件屬性=>定義物件方法</p>
+        <h3>Object有如PHP中的關聯陣列</h3>
+        <ul>
+            <li>創建方式</li>
+            <p>const person = {firstName:"John", lastName:"Doe", age:50,eyeColor:"blue"};</p>
+            <p>
+                const person = {<br>
+                firstName: "John",<br>
+                lastName: "Doe",<br>
+                age: 50,<br>
+                eyeColor: "blue"<br>
+                };
+            </p>
+            <p>
+                const person = {};<br>
+                person.firstName = "John";<br>
+                person.lastName = "Doe";<br>
+                person.age = 50;<br>
+                person.eyeColor = "blue";
+            </p>
+            <p>
+                const person = new Object();<br>
+                person.firstName = "John";<br>
+                person.lastName = "Doe";<br>
+                person.age = 50;<br>
+                person.eyeColor = "blue";
+            </p>
+        </ul>
+        <h3>物件屬性</h3>
+        <ul>
+            <li>呼叫屬性語法</li>
+            <p>
+                objectName.property // person.age
+            </p>
+            <p>
+                objectName["property"] // person["age"]
+            </p>
+            <p>
+                objectName[expression] // x = "age"; person[x]
+            </p>
+        </ul>
+        <h3>for...in函式 / for...of函式</h3>
+        <ul>
+            <li>語法</li>
+            <p>
+                for (const key in object) {<br>
+                console.log(key);<br>
+                } //提出索引/關聯索引
+            </p>
+            <p>
+                for (const iterator of object) {<br>
+                <br>
+                } //提出屬性(僅陣列適用)物件不適用此函式(物件可用Object.values())
 
-        </p>
-    </ul>
-    <h3>增加 / 刪除 物件屬性</h3>
-    <ul>
-        <li>增加新屬性</li>
-        <p>
-            person.newproperty = "English";
-        </p>
-        <li>刪除屬性</li>
-        <p>
-            delete person.property;
-        </p>
-    </ul>
-    <h3>二維物件</h3>
-    <ul>
-        <li>範例</li>
-        <p>
-            myObj = {<br>
-            name:"John",<br>
-            age:30,<br>
-            cars: {<br>
-            car1:"Ford",<br>
-            car2:"BMW",<br>
-            car3:"Fiat"<br>
-            }<br>
-            }
-        </p>
-        <li>呼叫方式</li>
-        <p>
-            myObj.cars["car2"];
-        </p>
-        <p>
-            myObj["cars"]["car2"];
-        </p>
-    </ul>
-    <h3>物件中可以是陣列,陣列中也可以是物件</h3>
-    <ul>
-        <li>範例</li>
-        <p>
-            const myObj = {<br>
+            </p>
+        </ul>
+        <h3>增加 / 刪除 物件屬性</h3>
+        <ul>
+            <li>增加新屬性</li>
+            <p>
+                person.newproperty = "English";
+            </p>
+            <li>刪除屬性</li>
+            <p>
+                delete person.property;
+            </p>
+        </ul>
+        <h3>二維物件</h3>
+        <ul>
+            <li>範例</li>
+            <p>
+                myObj = {<br>
+                name:"John",<br>
+                age:30,<br>
+                cars: {<br>
+                car1:"Ford",<br>
+                car2:"BMW",<br>
+                car3:"Fiat"<br>
+                }<br>
+                }
+            </p>
+            <li>呼叫方式</li>
+            <p>
+                myObj.cars["car2"];
+            </p>
+            <p>
+                myObj["cars"]["car2"];
+            </p>
+        </ul>
+        <h3>物件中可以是陣列,陣列中也可以是物件</h3>
+        <ul>
+            <li>範例</li>
+            <p>
+                const myObj = {<br>
                 name: "John",<br>
                 age: 30,<br>
                 cars: [<br>
-                  {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},<br>
-                  {name:"BMW", models:["320", "X3", "X5"]},<br>
-                  {name:"Fiat", models:["500", "Panda"]}<br>
+                {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},<br>
+                {name:"BMW", models:["320", "X3", "X5"]},<br>
+                {name:"Fiat", models:["500", "Panda"]}<br>
                 ]<br>
-              }
-        </p>
-    </ul>
-    <h3>Object.values()</h3>
-    <ul>
-        <li>範例</li>
-        <p>
-            const person = {<br>
+                }
+            </p>
+        </ul>
+        <h3>Object.values()</h3>
+        <ul>
+            <li>範例</li>
+            <p>
+                const person = {<br>
                 name: "John",<br>
                 age: 30,<br>
                 city: "New York"<br>
-              };<br>
-              <br>
-              const myArray = Object.values(person);<br>
-              document.getElementById("demo").innerHTML = myArray;
+                };<br>
+                <br>
+                const myArray = Object.values(person);<br>
+                document.getElementById("demo").innerHTML = myArray;
+            </p>
+        </ul>
+        <h3>this指向變數</h3>
+        <p>this 值在所有函式以外的全域執行環境下，會被當作全域物件</p>
+        <p>
+            console.log(this.document === document); // true <br>
+            <br>
+            // 在網路瀏覽器中，window 物件也是全域物件。 <br>
+            console.log(this === window); // true <br>
+            <br>
+            this.a = 37; <br>
+            console.log(window.a); // 37 <br>
+            <br>
+            this.b = "MDN"; <br>
+            console.log(window.b) // "MDN" <br>
+            console.log(b) // "MDN" <br>
         </p>
-    </ul>
-    <h3>this指向變數</h3>
-    <p>this 值在所有函式以外的全域執行環境下，會被當作全域物件</p>
-    <p>
-        console.log(this.document === document); // true <br>
-        <br>
-        // 在網路瀏覽器中，window 物件也是全域物件。 <br>
-        console.log(this === window); // true <br>
-        <br>
-        this.a = 37; <br>
-        console.log(window.a); // 37 <br>
-        <br>
-        this.b = "MDN"; <br>
-        console.log(window.b) // "MDN" <br>
-        console.log(b) // "MDN" <br>
-    </p>
-    <p>在函式內的 this 值取決於該函式如何被呼叫</p>
-    <p>
-        let a = 15;<br>
-        function myfun(a){ <br>
-        let x = a;<br>
-        let y = this.a;<br>
-        console.log(x,y);<br>
-        } <br>
-        myfun(100); //x = 100 , y =15;<br>
-    </p>
-    <h3>otherobj.call(thisobj)語法</h3>
-    <p>待補充...</p>
-    <h3>apply()語法</h3>
-    <p>待補充...</p>
-    <h3>Object.create(Object,{prototype:{value:condition}})語法</h3>
-    <p>待補充...</p>
+        <p>在函式內的 this 值取決於該函式如何被呼叫</p>
+        <p>
+            let a = 15;<br>
+            function myfun(a){ <br>
+            let x = a;<br>
+            let y = this.a;<br>
+            console.log(x,y);<br>
+            } <br>
+            myfun(100); //x = 100 , y =15;<br>
+        </p>
+        <h3>otherobj.call(thisobj)語法</h3>
+        <p>待補充...</p>
+        <h3>apply()語法</h3>
+        <p>待補充...</p>
+        <h3>Object.create(Object,{prototype:{value:condition}})語法</h3>
+        <p>待補充...</p>
+    </div>
     <script>
         for (const iterator of object) {
 

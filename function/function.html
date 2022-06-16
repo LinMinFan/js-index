@@ -6,23 +6,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>自訂函式</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-width: 100vh;
+            min-height: 100vh;
+        }
+
+        .continer {
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h2>函式定義/呼叫</h2>
-    <h3>定義</h3>
-    <p>function 函式名稱() <br>
-        { <br>
-        程式敘述; <br>
-        return 回傳值; //可有可無 <br>
-        } <br>
-    </p>
-    <h3>呼叫</h3>
-    <p>函式名稱();</p>
-    <a href="./function1.html" target="_blank"><h3>提款機功能練習</h3></a>
-    <a href="./function2.html" target="_blank"><h3>加減乘除練習</h3></a>
-    <a href="./function3.html" target="_blank"><h3>點餐機練習</h3></a>
-
+    <div class="continer">
+        <h2>函式定義/呼叫</h2>
+        <ul>
+            <li>定義</li>
+        </ul>
+        <p>
+            函數是用function關鍵字定義的，後跟一個name，然後是括號()。<br>
+            函數名稱可以包含字母、數字、下劃線和美元符號（與變量相同的規則）。<br>
+            括號中可能包含以逗號分隔的參數名稱：(<br>
+            parameter1 , parameter2, ... )<br>
+            函數要執行的代碼放在大括號內：{}
+        </p>
+        <p>function 函式名稱() <br>
+            { <br>
+            程式敘述; <br>
+            return 回傳值; //可有可無 <br>
+            } <br>
+        </p>
+        <p>
+            當碰到一個return語句時，函數將停止執行。
+        </p>
+        <p>
+            函數也可以使用表達式來定義。
+        </p>
+        <p>
+            const x = function (a, b) {return a * b};<br>
+            變數x可當作function_name
+        </p>
+        <ul>
+            <li>呼叫函式</li>
+        </ul>
+        <p>function_name();</p>
+        <ul>
+            <li>自動啟動函式不須呼叫</li>
+        </ul>
+        <p>
+            (function () {<br>
+            let x = "Hello!!"; // I will invoke myself<br>
+            })();
+        </p>
+        <ul>
+            <li>箭頭函式</li>
+        </ul>
+        <p>
+            箭頭函式為函式表達式的簡短語法。<br>
+            不需要function關鍵字、return關鍵字和大括號。
+        </p>
+        <p>
+            let a = function (x,y){<br>
+            return x * y;
+            }
+        </p>
+        <p>
+            縮減後為<br>
+            let a = (x, y) => x * y;
+        </p>
+        <p>
+            箭頭函式沒有自己的this. 不適合定義對象方法。<br>
+            箭頭函式沒有被提升。它們必須在使用前定義。<br>
+            const比let，因為函式表達式始終是常量值。
+        </p>
+        <ul>
+            <li>函式參數</li>
+        </ul>
+        <p>
+            函式定義不指定參數的數據類型。<br>
+            函式不對傳遞的參數執行類型檢查。<br>
+            函式不檢查接收到的參數數量。<br>
+            函式時缺少參數，有時這是可以接受的，但有時最好為參數分配一個默認值。
+        </p>
+        <p>
+            function myFunction(x, y = 2) {<br>
+            程式敘述; <br>
+            }
+        </p>
+        <a href="./function1.html" target="_blank">
+            <h3>提款機功能練習</h3>
+        </a>
+        <a href="./function2.html" target="_blank">
+            <h3>加減乘除練習</h3>
+        </a>
+        <a href="./function3.html" target="_blank">
+            <h3>點餐機練習</h3>
+        </a>
+    </div>
 </body>
 
 </html>

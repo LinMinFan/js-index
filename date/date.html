@@ -6,47 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日期與時間</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-width: 100vh;
+            min-height: 100vh;
+        }
+
+        .continer {
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h2>日期與時間</h2>
-    <h3>date屬性</h3>
-    <p>date = new Date(); //未給值定義當下日期或給值定義日期時間(Datetime)</p>
-    <p>給值方式如：</p>
-    <p>("2022-5-1");</p>
-    <p>("2022/5/1");</p>
-    <p>("2022-5");</p>
-    <p>("2022");</p>
-    <p>未給月則為當月第一天</p>
-    <p>未給月日則為當年第一天</p>
-    <script>
-        date = new Date();
-        console.log(date);
-        month = date.getTimezoneOffset(date);
-    </script>
-    <h3>常用方法</h3>
-    <p>
-        getFullYear() //取得西元年<br>
-        getMonth() //取得月份(0~11 = 1~12月)<br>
-        getDate() //取得月份中日期(1~31)<br>
-        getDay() //取得星期數(0~6 = 日~六)<br>
-        getHours() //取得小時(0~23)<br>
-        getMinutes() //取得分鐘(0~59)<br>
-        getSeconds() //取得秒(0~59)<br>
-        getMilliseconds() //取得千分之一秒(0~999)<br>
-        getTime() //回傳回1970年1月1日0時0分0秒開始算起到日期物件時間經過的秒數<br>
-        setFullYear() //設定西元年<br>
-        setMonth() //設定月份(0~11 = 1~12月)<br>
-        setDate() //設定月份中日期(1~31)<br>
-        setHours() //設定小時(0~23)<br>
-        setMinutes() //設定分鐘(0~59)<br>
-        setSeconds() //設定秒(0~59)<br>
-        setMilliseconds() //設定千分之一秒(0~999)<br>
-    </p>
+    <div class="continer">
+        <h2>日期與時間</h2>
+        <h3>date屬性</h3>
+        <p>date = new Date(); //未給值定義當下日期或給值定義日期時間(Datetime)</p>
+        <p>給值方式如：</p>
+        <p>("2022-5-1");</p>
+        <p>("2022/5/1");</p>
+        <p>("2022-5");</p>
+        <p>("2022");</p>
+        <p>未給月則為當月第一天</p>
+        <p>未給月日則為當年第一天</p>
+        <script>
+            date = new Date();
+            console.log(date);
+            month = date.getTimezoneOffset(date);
+        </script>
+        <h3>常用方法</h3>
+        <p>
+            getFullYear() //取得西元年<br>
+            getMonth() //取得月份(0~11 = 1~12月)<br>
+            getDate() //取得月份中日期(1~31)<br>
+            getDay() //取得星期數(0~6 = 日~六)<br>
+            getHours() //取得小時(0~23)<br>
+            getMinutes() //取得分鐘(0~59)<br>
+            getSeconds() //取得秒(0~59)<br>
+            getMilliseconds() //取得千分之一秒(0~999)<br>
+            getTime() //回傳回1970年1月1日0時0分0秒開始算起到日期物件時間經過的秒數<br>
+            setFullYear() //設定西元年<br>
+            setMonth() //設定月份(0~11 = 1~12月)<br>
+            setDate() //設定月份中日期(1~31)<br>
+            setHours() //設定小時(0~23)<br>
+            setMinutes() //設定分鐘(0~59)<br>
+            setSeconds() //設定秒(0~59)<br>
+            setMilliseconds() //設定千分之一秒(0~999)<br>
+        </p>
 
 
 
-
+    </div>
 </body>
 
 </html>

@@ -11,73 +11,72 @@
             box-sizing: border-box;
         }
 
-        h2 {
-            text-align: center;
+        body {
+            min-width: 100vh;
+            min-height: 100vh;
         }
 
-        ul {
-            list-style: none;
-        }
-
-        ul li {
-            font-weight: bold;
+        .continer {
+            width: 80%;
+            margin: 20px auto;
         }
     </style>
 </head>
 
 <body>
-    <h2>js陣列語法</h2>
-    <ul>
-        <li>創建陣列</li>
-        <p>let array_name = [item1, item2, ...];</p>
-        <li>呼叫陣列</li>
-        <p>array_name[0,1,2...];</p>
-        <li>長度屬性</li>
-        <p>array_name.length;</p>
-        <li>Array.forEach()功能</li>
-        <p>array.forEach((value,key) => { });</p>
-        <li>從最後添加陣列value</li>
-        <p>array.push("value");</p>
-        <li>陣列刪除最後一個value</li>
-        <p>array..pop();</p>
-        <li>識別陣列value</li>
-        <p>typeof array => object;</p>
-        <li>陣列轉換為字串</li>
-        <p>array.toString();</p>
-        <li>陣列合併</li>
-        <p>newarray = arrayA.concat(arrayB);A陣列後加上B陣列</p>
-        <li>陣列拼接</li>
-        <p>splice(2, 0, "value1", "value2");</p>
-        <p>第一個參數(2)定義了應該添加/刪除新元素的位置。</p>
-        <p>第二個參數(0)定義應該刪除多少元素。</p>
-        <p>array.splice(2,2);</p>
-        <p>回傳從(2)開始刪除的(2)項value</p>
-        <li>按字母順序對陣列進行排序</li>
-        <p>array.sort();</p>
-        <li>反轉陣列</li>
-        <p>array.reverse();</p>
-        <li>陣列映射</li>
-        <p>array.map(myFunction(value, index, array){return value + 條件(運算)});</p>
-        <p>通過對每個數組元素執行一個函數來創建一個新數組。</p>
-        <p>function內需要3個參數,若只使用value參數時,可以省略index和array參數</p>
-        <li>陣列過濾器</li>
-        <p>array.filter(myFunction(value, index, array){return value + 條件(比較值)});</p>
-        <p>function內需要3個參數,若只使用value參數時,可以省略index和array參數</p>
-        <li>陣列數字的總和</li>
-        <p>array.reduce(myFunction(total,value, index, array){return total + value});</p>
-        <p>function內需要4個參數,若只使用value參數時,可以省略index和array參數</p>
-        <p>可以接受一個初始值array.reduce(myFunction, 初始值); => 初始值 + sum</p>
-        <li>陣列中搜索元素值並返回其位置</li>
-        <p>array.indexOf;</p>
-        <p>返回索引值(0,1,2...)如果未找到該項目,則返回(-1)多次出現,則返回第一次出現的位置。</p>
-        <li>陣列包含</li>
-        <p>array.includes;</p>
-        <p>檢查一個元素是否存在於數組中,包括 NaN,與indexOf不同回傳布林值</p>
-    </ul>
+    <div class="continer">
+        <h2>js陣列語法</h2>
+        <ul>
+            <li>創建陣列</li>
+            <p>let array_name = [item1, item2, ...];</p>
+            <li>呼叫陣列</li>
+            <p>array_name[0,1,2...];</p>
+            <li>長度屬性</li>
+            <p>array_name.length;</p>
+            <li>Array.forEach()功能</li>
+            <p>array.forEach((value,key) => { });</p>
+            <li>從最後添加陣列value</li>
+            <p>array.push("value");</p>
+            <li>陣列刪除最後一個value</li>
+            <p>array..pop();</p>
+            <li>識別陣列value</li>
+            <p>typeof array => object;</p>
+            <li>陣列轉換為字串</li>
+            <p>array.toString();</p>
+            <li>陣列合併</li>
+            <p>newarray = arrayA.concat(arrayB);A陣列後加上B陣列</p>
+            <li>陣列拼接</li>
+            <p>splice(2, 0, "value1", "value2");</p>
+            <p>第一個參數(2)定義了應該添加/刪除新元素的位置。</p>
+            <p>第二個參數(0)定義應該刪除多少元素。</p>
+            <p>array.splice(2,2);</p>
+            <p>回傳從(2)開始刪除的(2)項value</p>
+            <li>按字母順序對陣列進行排序</li>
+            <p>array.sort();</p>
+            <li>反轉陣列</li>
+            <p>array.reverse();</p>
+            <li>陣列映射</li>
+            <p>array.map(myFunction(value, index, array){return value + 條件(運算)});</p>
+            <p>通過對每個數組元素執行一個函數來創建一個新數組。</p>
+            <p>function內需要3個參數,若只使用value參數時,可以省略index和array參數</p>
+            <li>陣列過濾器</li>
+            <p>array.filter(myFunction(value, index, array){return value + 條件(比較值)});</p>
+            <p>function內需要3個參數,若只使用value參數時,可以省略index和array參數</p>
+            <li>陣列數字的總和</li>
+            <p>array.reduce(myFunction(total,value, index, array){return total + value});</p>
+            <p>function內需要4個參數,若只使用value參數時,可以省略index和array參數</p>
+            <p>可以接受一個初始值array.reduce(myFunction, 初始值); => 初始值 + sum</p>
+            <li>陣列中搜索元素值並返回其位置</li>
+            <p>array.indexOf;</p>
+            <p>返回索引值(0,1,2...)如果未找到該項目,則返回(-1)多次出現,則返回第一次出現的位置。</p>
+            <li>陣列包含</li>
+            <p>array.includes;</p>
+            <p>檢查一個元素是否存在於數組中,包括 NaN,與indexOf不同回傳布林值</p>
+        </ul>
 
 
 
-
+    </div>
     <script>
 
 
